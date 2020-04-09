@@ -78,7 +78,6 @@ export default {
 
         this.resetFilterArr()
 
-        // add selected items to filter arr. Also, make function, what will add selected conditions to filter arr***
         this.addToFilterArr(this.manufacturer, this.filterArr.manufacturer)
         this.addToFilterArr(this.cpu, this.filterArr.cpu)
         this.addToFilterArr(this.gpu, this.filterArr.gpu)

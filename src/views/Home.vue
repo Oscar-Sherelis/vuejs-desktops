@@ -53,6 +53,10 @@ export default {
   },
   methods: {
     toCart:function (selectedId) {
+      if (this.$store.state.isBought === true) {
+               this.$store.state.boughtDesktops.pop()
+               this.$store.state.isBought = false
+            }
       this.$store.state.desktops.forEach(obj => {
               if (Object.values(obj).some(value => value === selectedId)) {
                 this.$store.state.boughtDesktops.push(obj)
@@ -67,7 +71,6 @@ export default {
     }
   },
   mounted () {
-    this.resetCart()
   }
 }
 </script>
