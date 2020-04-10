@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <SearchPc/>
+    <SortPc />
     <main>
     <Filters/>
     <div class="container">
@@ -41,10 +42,13 @@
 <script>
 import Filters from '@/components/Filters'
 import SearchPc from '@/components/SearchPc'
+import SortPc from '@/components/SortPc'
+
 export default {
   components: {
     Filters,
-    SearchPc
+    SearchPc,
+    SortPc
   },
   data () {
     return {
