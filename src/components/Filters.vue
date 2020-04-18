@@ -126,4 +126,7 @@ export default {
         text-align: left;
         padding: 20px;
     }
+    .checkbox-component {
+      line-height: 16px;
+    }
 </style>
