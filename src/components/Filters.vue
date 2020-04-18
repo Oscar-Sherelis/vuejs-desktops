@@ -1,34 +1,34 @@
 <template>
   <div class="filters">
-      <div class="manufaturer">
+      <div class="manufacturer">
         <form>
-              <h2>Manufaturer</h2>
+              <h2>Manufacturer</h2>
               <checkbox v-for="manListEl of manufacturerList" :key="manListEl.id" 
                 :value="manListEl"
                 v-model="manufacturer"
               >
-                {{ manListEl }}
+                <span>{{ manListEl }}</span>
               </checkbox>
               <h2>Cpu</h2>
               <checkbox v-for="cpuListEl of cpuList" :key="cpuListEl.id" 
                 :value="cpuListEl"
                 v-model="cpu"
               >
-                {{ cpuListEl }}
+                <span>{{ cpuListEl }}</span>
               </checkbox>
               <h2>Gpu</h2>
               <checkbox v-for="gpuListEl of gpuList" :key="gpuListEl.id" 
                 :value="gpuListEl"
                 v-model="gpu"
               >
-                {{ gpuListEl }}
+                <span>{{ gpuListEl }}</span>
               </checkbox>
               <h2>Ram</h2>
               <checkbox v-for="ramListEl of ramList" :key="ramListEl.id" 
                 :value="ramListEl"
                 v-model="ram"
               >
-                {{ ramListEl }}
+                <span>{{ ramListEl }}</span>
               </checkbox>
               <b-button @click.prevent="selectedManufacturer()" variant="primary">Filter</b-button>
         </form>
@@ -120,13 +120,17 @@ export default {
 </script>
 
 <style scoped>
-    form {  
-        background-color: #352e53;
-        color: #fff;
-        text-align: left;
-        padding: 20px;
-    }
-    .checkbox-component {
-      line-height: 16px;
-    }
+form {  
+    background-color: #352e53;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+}
+.checkbox-component {
+    line-height: 16px;
+    font-size: 26px;
+}
+form span {
+  line-height: 25px;
+}
 </style>
