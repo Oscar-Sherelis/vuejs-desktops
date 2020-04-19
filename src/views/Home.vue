@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <SearchPc/>
-    <SortPc />
+    <SortPc/>
     <main>
     <Filters/>
     <div class="container">
@@ -135,19 +135,26 @@ export default {
    color: #fff;
  }
 
- @media screen and (max-width: 800px) {
-    .desktops ul {
-   grid-gap: 20px;
-   grid-template-columns: auto auto auto;
+@media screen and (max-width: 950px) {
+  .desktops ul {
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto;
   }
  }
 
-  @media screen and (max-width: 450px) {
+@media screen and (max-width: 670px) {
+   .desktops ul {
+   grid-gap: 10px;
+   grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 570px) {
   main {
     display: block;
   }
   .desktops ul {
-   grid-gap: 10px;
+   grid-gap: 5px;
    grid-template-columns: auto auto;
   }
  }
