@@ -17,12 +17,20 @@
               <img src= '../assets/desktop.webp'>
               <h4>{{ desktop.manufacturer }}</h4>
               <p>Model: {{ desktop.model }}</p>
-              <span class="description">
-                Cpu: {{ desktop.cpu }}
-                Gpu: {{ desktop.gpu}}
-                Storage: {{ desktop.storage1}}
-                Ram: {{ desktop.ram }}
-              </span>
+              <div class="description">
+                 <div class="description_item">
+                   <img src= '../assets/cpu.svg'> <span>{{ desktop.cpu }}</span>
+                 </div>
+                  <div class="description_item">
+                   <img src= '../assets/graphics-card.svg'> {{ desktop.gpu}}
+                  </div>
+                  <div class="description_item">
+                   <img src= '../assets/hdd.svg'> {{ desktop.storage1}}
+                  </div>
+                  <div class="description_item">
+                   <img src= '../assets/ram.svg'> {{ desktop.ram }}
+                  </div>
+              </div>
               <p>Price: <span class="price"> {{ desktop.price }} </span></p>
               <b-button :value="desktop.id" variant="success" @click.prevent="toCart(desktop.id)">Add to chart</b-button>
           </div>
@@ -81,7 +89,7 @@ export default {
 <style scoped>
  main {
    display: flex;
-   background-color: #262430;
+   background-color: #383950;
  }
  .container {
    margin: 0 auto;
@@ -106,21 +114,15 @@ export default {
    display: block;
    margin: 0 auto;
  }
- .desktop .description {
-   visibility: hidden;
-   position: absolute;
-   z-index: 1;
-   top: -20%;
-   left: 0;
-   right: 0;
-   width: 150px;
-   background-color: rgba(40, 44, 52, 0.8);
-   padding: 5px;
-   border-radius: 6px;
-   color: #fff;
+.description img{
+   width: 40px;
+   height: 40px;
+   margin: 0 10px 0 0;
  }
- .desktop:hover .description {
-   visibility: visible;
+ .description_item {
+   display: flex;
+   align-items: center;
+   margin-bottom: 10px;
  }
 .price {
   font-weight: bold;
